@@ -21,7 +21,7 @@ export default function Home() {
                 <span className="font-semibold">V3 Digital Studio</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                An entreprenuerial creative developer and designer.
+                An entrepreneurial creative developer and designer.
               </p>
             </div>
             <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
