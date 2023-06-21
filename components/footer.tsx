@@ -1,37 +1,33 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 function NavLink({ href, children }) {
   return (
     <Link
       href={href}
-      className="transition hover:text-teal-500 dark:hover:text-teal-400"
+      className="text-sm font-medium text-zinc-800 dark:text-zinc-200 transition hover:text-teal-500 dark:hover:text-teal-400"
     >
       {children}
     </Link>
-  );
+  )
 }
 
-export default function Footer() {
+export function Footer() {
   return (
-    <footer className="mt-32">
-      <div className="mx-auto max-w-7xl lg:px-8">
-        <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
-          <div className="mx-auto max-w-2xl lg:max-w-5xl">
-            <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-              <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-                <NavLink href="/about">About</NavLink>
-                <NavLink href="/blog">Blog</NavLink>
-                <NavLink href="/projects">Projects</NavLink>
-                <NavLink href="/photos">Photos</NavLink>
-                <NavLink href="/uses">Uses</NavLink>
-              </div>
-              <p className="text-sm text-zinc-600 dark:text-zinc-300">
-                &copy; {new Date().getFullYear()}
-              </p>
-            </div>
+    <footer>
+      <div className="container flex flex-col items-center justify-center gap-4 py-10">
+        <div className="border-t-2">
+          <div className="flex items-center justify-center gap-4 pt-8">
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/photos">Photos</NavLink>
+            <NavLink href="/uses">Uses</NavLink>
+            <p className="text-sm text-zinc-600 dark:text-zinc-300">
+              &copy; {new Date().getFullYear()}
+            </p>
           </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }
