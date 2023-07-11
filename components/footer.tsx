@@ -1,76 +1,33 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-// import NowPlaying from 'components/NowPlaying';
-
-const ExternalLink = ({ href, children }) => (
-  <a
-    className="text-gray-500 hover:text-gray-600 transition"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
-    {children}
-  </a>
-);
-
-export default function Footer() {
+function NavLink({ href, children }) {
   return (
-    <footer className="flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8">
-      <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8" />
-      {/* <NowPlaying /> */}
-      <div className="w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
-        <div className="flex flex-col space-y-4">
-          <Link
-            href="/"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Home
-          </Link>
-          <Link
-            href="/"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            About (Building)
-          </Link>
-          <Link
-            href="/"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Newsletter (Building)
-          </Link>
-        </div>
-        <div className="flex flex-col space-y-4">
-          <ExternalLink href="https://twitter.com/v3frankie">
-            Twitter
-          </ExternalLink>
-          <ExternalLink href="https://github.com/frankievalentine">
-            GitHub
-          </ExternalLink>
-          {/* <ExternalLink href="https://www.youtube.com/channel/UCZMli3czZnd1uoc1ShTouQw">
-            YouTube
-          </ExternalLink> */}
-        </div>
-        <div className="flex flex-col space-y-4">
-          <Link
-            href="/"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Uses (Building)
-          </Link>
-          {/* <Link
-            href="/snippets"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Snippets
-          </Link> */}
-          <Link
-            href="/"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Tweets (Building)
-          </Link>
+    <Link
+      href={href}
+      className="text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+    >
+      {children}
+    </Link>
+  )
+}
+
+export function Footer() {
+  return (
+    <footer>
+      <div className="container flex flex-col items-center justify-center gap-4 py-10">
+        <div className="border-t-2">
+          <div className="flex items-center justify-center gap-4 pt-8">
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/photos">Photos</NavLink>
+            <NavLink href="/uses">Uses</NavLink>
+            <p className="text-sm text-zinc-600 dark:text-zinc-300">
+              &copy; {new Date().getFullYear()}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }
