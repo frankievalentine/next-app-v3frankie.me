@@ -70,20 +70,26 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: '/favicon/favicon-32x32.png',
+      type: 'image/ico',
+      sizes: 'any',
+      url: '/favicon.ico',
     },
     {
       rel: 'icon',
       type: 'image/png',
-      sizes: '16x16',
-      url: '/favicon/favicon-16x16.png',
+      sizes: '32x32',
+      url: '/public/favicon-16x16.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '96x96',
+      url: '/public/favicon-32x32.png',
     },
     {
       rel: 'apple-touch-icon',
-      sizes: '180x180',
-      url: '/favicon/apple-touch-icon.png',
+      sizes: '152x152',
+      url: '/public/apple-touch-icon.png',
     },
   ],
   manifest: `${siteConfig.url}/site.webmanifest`,
@@ -96,7 +102,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen bg-background antialiased">
+      <body className="bg-background antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
           {/* <Analytics /> */}

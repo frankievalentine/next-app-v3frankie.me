@@ -1,10 +1,5 @@
-import nextMDX from '@next/mdx'
-import remarkGfm from 'remark-gfm'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
     images: {
         formats: ['image/avif', 'image/webp'],
     },
@@ -24,15 +19,6 @@ const nextConfig = {
         ];
     },
 };
-
-const withMDX = nextMDX({
-    extension: /\.mdx?$/,
-    options: {
-        remarkPlugins: [remarkGfm],
-        // rehypePlugins: [rehypePrismPlus, rehypePresetMinify],
-        providerImportSource: '@mdx-js/react'
-    },
-})
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
@@ -83,5 +69,4 @@ const securityHeaders = [
     },
 ];
 
-export default withMDX(nextConfig)
-// export default nextConfig
+export default nextConfig

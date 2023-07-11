@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <div className="flex min-h-screen flex-col">
-        <header className="container z-40 bg-background">
+        <header className="bg-background container z-40">
           <div className="flex h-20 items-center justify-between py-6">
             <Link
               className="group h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
@@ -32,19 +32,19 @@ export default function Page() {
           </div>
         </header>
         <main className="flex justify-center">
-          <section className="space-y-6 pb-8 pt-20 md:pb-12 md:pt-16 lg:py-32">
-            <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
+          <section className="mt-20 space-y-6 rounded-xl pb-8 shadow-2xl md:pb-12 md:pt-16 lg:py-32">
+            <div className="container flex flex-col items-center gap-4 text-center">
               <Link
                 href="/"
-                className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium"
+                className="bg-muted rounded-2xl px-4 py-1.5 text-sm font-medium shadow-lg"
                 target="_blank"
               >
-                Follow along on Twitter
+                Follow me on Twitter
               </Link>
-              <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-                An example app built using Next.js 13 server components.
+              <h1 className="font-heading text-2xl sm:text-2xl md:text-4xl lg:text-7xl">
+                Hi, I&apos;m Frankie.
               </h1>
-              <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+              <p className="text-muted-foreground leading-normal sm:text-xl sm:leading-8">
                 I&apos;m building a web app with Next.js 13 and open sourcing
                 everything. Follow along as we figure this out together.
               </p>
