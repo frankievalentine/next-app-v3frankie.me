@@ -1,11 +1,31 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import Navigation from '@/components/nav'
-import { MobileNavigation } from '@/components/mobile-nav'
-import { ThemeDropdown } from '@/components/theme-dropdown'
-import { Footer } from '@/components/footer'
+import Image from "next/image"
+import Link from "next/link"
 
-import avatarImage from './avatar.jpg'
+// import clsx from "clsx";
+import { siteConfig } from "@/config/site"
+import { Footer } from "@/components/footer"
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from "@/components/icons"
+import { MobileNavigation } from "@/components/mobile-nav"
+import Navigation from "@/components/nav"
+import { Newsletter } from "@/components/newsletter"
+import HomePosts from "@/components/posts"
+import { ThemeDropdown } from "@/components/theme-dropdown"
+
+import WFHHERODARK from "../public/images/WFH-hero-dark.png"
+import avatarImage from "./avatar.jpg"
+
+function SocialLink({ icon: Icon, ...props }) {
+  return (
+    <Link href="" className="group -m-1 p-1" {...props}>
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    </Link>
+  )
+}
 
 // `app/page.tsx` is the UI for the `/` URL
 export default function Page() {
@@ -32,26 +52,53 @@ export default function Page() {
           </div>
         </header>
         <main className="flex justify-center">
-          <section className="mt-20 space-y-6 rounded-xl pb-8 shadow-2xl md:pb-12 md:pt-16 lg:py-32">
-            <div className="container flex flex-col items-center gap-4 text-center">
-              <Link
-                href="/"
-                className="bg-muted rounded-2xl px-4 py-1.5 text-sm font-medium shadow-lg"
-                target="_blank"
-              >
-                Follow me on Twitter
-              </Link>
-              <h1 className="font-heading text-2xl sm:text-2xl md:text-4xl lg:text-7xl">
-                Hi, I&apos;m Frankie.
+          <section className="mt-20 space-y-6 rounded-xl pb-8 md:pt-16 lg:py-20">
+            <Image
+              width={649}
+              height={309}
+              src={WFHHERODARK}
+              alt="Hero"
+              className="w-full rounded-xl"
+            />
+            <div className="container flex flex-col gap-4">
+              <h1 className="max-w-xl text-3xl font-bold">
+                Creative developer, designer, founder, and father of 1.
               </h1>
-              <p className="text-muted-foreground leading-normal sm:text-xl sm:leading-8">
-                I&apos;m building a web app with Next.js 13 and open sourcing
-                everything. Follow along as we figure this out together.
+              <p className="text-muted-foreground leading-normal md:max-w-2xl md:text-xl md:leading-8">
+                I currently reside in Nevada. I&apos;m the founder and CEO of V3
+                Digital Studio, where we develop for the web with modern tools
+                and baked in performance. I also run two publications called
+                Graphyte and Perspectives on Substack. When I have time I like
+                to fly drones and built a company called Aero9.
               </p>
+              <div className="mt-6 flex gap-6">
+                <SocialLink
+                  href={siteConfig.links.twitter}
+                  aria-label="Follow on Twitter"
+                  icon={TwitterIcon}
+                />
+                <SocialLink
+                  href={siteConfig.links.instagram}
+                  aria-label="Follow on Instagram"
+                  icon={InstagramIcon}
+                />
+                <SocialLink
+                  href={siteConfig.links.github}
+                  aria-label="Follow on GitHub"
+                  icon={GitHubIcon}
+                />
+                <SocialLink
+                  href={siteConfig.links.linkedin}
+                  aria-label="Follow on LinkedIn"
+                  icon={LinkedInIcon}
+                />
+              </div>
             </div>
           </section>
         </main>
+        <HomePosts />
       </div>
+      <Newsletter />
       <Footer />
     </>
   )

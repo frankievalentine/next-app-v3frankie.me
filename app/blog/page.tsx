@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import type { Metadata } from "next"
+
 // import Image from "next/image";
 // import Link from "next/link";
 // import clsx from "clsx";
@@ -8,7 +9,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog",
   description: "Founder of V3 Digital Studio.",
-};
+}
 
 export default function Blog() {
   return (
@@ -36,7 +37,7 @@ export default function Blog() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 // import type { Metadata } from "next";
