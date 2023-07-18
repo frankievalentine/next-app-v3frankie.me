@@ -1,4 +1,4 @@
-import { SiteConfig } from "types"
+import { SiteConfig } from "types";
 
 export const siteConfig: SiteConfig = {
   name: "v3frankie.me",
@@ -8,5 +8,7 @@ export const siteConfig: SiteConfig = {
   links: {
     twitter: "https://twitter.com/v3frankie",
     github: "https://github.com/frankievalentine",
+    instagram: "https://instagram.com/v3frankie",
+    linkedin: "https://linkedin.com/in/frankievalentine",
   },
 };
