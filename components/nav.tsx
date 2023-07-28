@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import clsx from "clsx";
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import clsx from "clsx"
 
 function NavItem({ href, children }) {
-  let isActive = usePathname() === href;
+  let isActive = usePathname() === href
 
   return (
     <li>
@@ -24,7 +24,7 @@ function NavItem({ href, children }) {
         )}
       </Link>
     </li>
-  );
+  )
 }
 
 export default function DesktopNavigation(props) {
@@ -38,5 +38,5 @@ export default function DesktopNavigation(props) {
         <NavItem href="/uses">Uses</NavItem>
       </ul>
     </nav>
-  );
+  )
 }

@@ -1,9 +1,10 @@
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
-import { Button } from "./button";
+import { EnvelopeClosedIcon } from "@radix-ui/react-icons"
+
+import { Button } from "./button"
 
 export function Newsletter() {
   return (
-    <div className="flex justify-center">
+    <div className="mt-5 flex max-w-2xl justify-center px-14 md:mt-10 md:px-24">
       <form action="/thank-you" className="max-w-[35rem] rounded-2xl">
         <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <EnvelopeClosedIcon className="h-5 w-5 flex-none" />
@@ -27,5 +28,5 @@ export function Newsletter() {
         </div>
       </form>
     </div>
-  );
+  )
 }
