@@ -4,13 +4,13 @@ import { Button } from "./button"
 
 export function Newsletter() {
   return (
-    <div className="mt-5 flex max-w-2xl justify-center px-14 md:mt-10 md:px-24">
+    <div className="my-28 flex max-w-xs justify-center md:max-w-2xl">
       <form action="/thank-you" className="max-w-[35rem] rounded-2xl">
         <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <EnvelopeClosedIcon className="h-5 w-5 flex-none" />
           <span className="ml-2">Stay up to date</span>
         </h2>
-        <p className="mt-2 max-w-md text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-muted-foreground mt-2 max-w-md text-sm dark:text-white">
           Get notified when I publish something new, life updates, never any
           spam, and unsubscribe at any time.
         </p>

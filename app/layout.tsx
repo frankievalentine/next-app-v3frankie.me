@@ -108,7 +108,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-background min-h-screen antialiased">
+      <body className="min-h-screen antialiased dark:bg-black">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           {children}

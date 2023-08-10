@@ -4,7 +4,7 @@
 - **Deployment**: [Vercel](https://vercel.com)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 
-## Overview
+## Project Structure
 
 <!-- - `layouts/*` - The different page layouts each MDX category (blog, snippets) uses. -->
 
@@ -17,7 +17,7 @@
 - `public/*` - Static assets including fonts and images.
 - `styles/*` - A small amount of global styles. I'm mostly using vanilla Tailwind CSS.
 
-## Running Locally
+## Running this site locally
 
 Clone using the GitHub CLI.
 
