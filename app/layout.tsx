@@ -1,6 +1,7 @@
 import "@/styles/globals.css"
 
 import type { Metadata } from "next"
+import Script from "next/script"
 
 import { siteConfig } from "@/config/site"
 import { Footer } from "@/components/footer"
@@ -117,6 +118,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <TailwindIndicator />
         </ThemeProvider>
       </body>
+      <Script
+        async
+        src="https://analytics.v3frankie.me/script.js"
+        data-website-id="ea0209c3-05d6-4cb9-a601-a19bb12e052a"
+      />
     </html>
   )
 }
