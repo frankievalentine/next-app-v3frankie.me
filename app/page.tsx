@@ -45,14 +45,14 @@ import { Newsletter } from "@/components/newsletter"
 export default function Page() {
   return (
     <>
-      <main className="flex flex-col items-center justify-center md:flex-col">
-        <section className="mt-40 md:flex md:flex-row">
-          <HeroImg />
-          <div className="mt-5 max-w-2xl px-14 md:mt-10 md:px-24">
-            <h1 className="mb-3 text-3xl font-bold">
+      <main className="flex flex-col items-center justify-center">
+        <HeroImg />
+        <section>
+          <div className="max-w-xs md:max-w-lg">
+            <h1 className="mb-3 text-xl font-bold md:text-3xl">
               Creative developer, designer, founder, and father of 1.
             </h1>
-            <p className="text-muted-foreground text-xl">
+            <p className="text-muted-foreground text-base md:text-xl">
               I currently reside in Nevada. I&apos;m the Founder of V3 Digital
               Studio, where we develop for the web with modern tools and baked
               in performance. I also run two publications called Graphyte and
@@ -93,7 +93,6 @@ export default function Page() {
             /> */}
           </div>
         </section>
-        <Newsletter />
 
         {/* <section className="mt-20">
           <div className="mt-5 max-w-2xl px-14 md:mt-10 md:px-24">
@@ -157,6 +156,7 @@ export default function Page() {
             </div>
           </div>
         </section> */}
+        <Newsletter />
       </main>
     </>
   )

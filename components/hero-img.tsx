@@ -21,7 +21,7 @@ export function HeroImg() {
 
   return (
     <Image
-      className=""
+      className="mb-10 max-w-sm md:max-w-3xl"
       src={src}
       width={1349}
       height={1009}

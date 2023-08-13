@@ -10,7 +10,7 @@ import { ThemeDropdown } from "@/components/theme-dropdown"
 export function Header() {
   return (
     <header className="container flex flex-row justify-end md:px-0">
-      <div className="mt-5">
+      <div className="mb-24 mt-5">
         {/* <Link
           className="group h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
           href="/"
