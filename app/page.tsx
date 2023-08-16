@@ -74,7 +74,7 @@ export default function Page() {
             >
               <Button
                 href={""}
-                className="h-16 w-44 rounded-3xl text-xl transition duration-300 delay-150 ease-in-out hover:-translate-y-1 hover:scale-110"
+                className="h-16 w-44 rounded-3xl text-xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
               >
                 Socials
               </Button>
