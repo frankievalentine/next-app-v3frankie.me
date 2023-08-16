@@ -4,8 +4,8 @@ import { Button } from "./button"
 
 export function Newsletter() {
   return (
-    <div className="mt-10 max-w-xs md:max-w-2xl">
-      <form action="/thank-you" className=" rounded-2xl">
+    <div className="mt-10 max-w-xs rounded-xl border p-12 md:mt-12 md:max-w-2xl">
+      <form action="/thank-you" className="rounded-2xl">
         <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <EnvelopeClosedIcon className="h-5 w-5 flex-none" />
           <span className="ml-2">Stay up to date</span>

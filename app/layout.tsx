@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import Script from "next/script"
 
 import { siteConfig } from "@/config/site"
+import { CalEmbed } from "@/components/cal-embed"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -115,6 +116,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <Footer />
           {/* <Analytics /> */}
+          <CalEmbed />
           <TailwindIndicator />
         </ThemeProvider>
       </body>

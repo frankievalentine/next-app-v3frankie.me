@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 
 import { Button } from "@/components/button"
 import { HeroImg } from "@/components/hero-img"
@@ -47,31 +47,41 @@ export default function Page() {
     <>
       <main className="flex flex-col items-center justify-center">
         <HeroImg />
+
         <section>
           <div className="max-w-xs md:max-w-lg">
             <h1 className="mb-3 text-xl font-bold md:text-3xl">
               Creative developer, designer, founder, and father of 1.
             </h1>
-            <p className="text-muted-foreground text-base md:text-xl">
-              I currently reside in Nevada. I&apos;m the Founder of V3 Digital
-              Studio, where we develop for the web with modern tools and baked
-              in performance. I also run two publications called Graphyte and
-              Perspectives on Substack. When I have time I like to fly drones
-              and built a company called Aero9.
+            <p className="text-base md:text-xl">
+              I currently reside in Nevada.
+              <br /> I&apos;m the Founder of{" "}
+              <a
+                className="text-gray-900 underline decoration-teal-400 hover:decoration-wavy dark:text-white"
+                href="https://v3digital.studio"
+              >
+                V3 Digital Studio
+              </a>
+              , where we develop for the web with modern tools and baked in
+              performance.
+              <br /> I offer consultations 1-on-1 AMA style. Anything goes.
             </p>
             <a
               href="https://bento.me/v3frankie"
               target="_blank"
               rel="noreferrer"
-              className="mt-12 flex justify-center"
+              className="my-24 flex justify-center"
             >
-              <Button href="" type="" className="bg-indigo-400">
-                Follow me
+              <Button
+                href={""}
+                className="h-16 w-44 rounded-3xl text-xl transition duration-300 delay-150 ease-in-out hover:-translate-y-1 hover:scale-110"
+              >
+                Socials
               </Button>
             </a>
           </div>
-          <div className="mt-6 gap-6">
-            {/* <SocialLink
+          {/* <div className="mt-6 gap-6">
+            <SocialLink
               href={siteConfig.links.twitter}
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
@@ -90,8 +100,8 @@ export default function Page() {
               href={siteConfig.links.linkedin}
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
-            /> */}
-          </div>
+            />
+          </div> */}
         </section>
 
         {/* <section className="mt-20">
