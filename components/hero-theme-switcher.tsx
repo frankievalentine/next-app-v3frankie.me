@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useTheme } from "next-themes"
 
-export function HeroImg() {
+export function HeroThemeSwitcher() {
   const { resolvedTheme } = useTheme()
   let src
 

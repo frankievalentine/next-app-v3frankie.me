@@ -10,17 +10,6 @@ import { Header } from "@/components/header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 
-// import localFont from "next/font/local";
-// import clsx from "clsx";
-// import { Analytics } from "@vercel/analytics/react";
-
-// const kaisei = localFont({
-//   src: "../public/fonts/kaisei-tokumin-latin-700-normal.woff2",
-//   weight: "700",
-//   variable: "--font-kaisei",
-//   display: "swap",
-// });
-
 interface RootLayoutProps {
   children: React.ReactNode
 }

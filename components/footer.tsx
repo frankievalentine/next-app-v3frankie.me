@@ -27,9 +27,9 @@ export function Footer() {
             </p>
           </div>
         </div>
-        <span className="w-32 text-center text-xs">
+        {/* <span className="w-32 text-center text-xs">
           Credit to <i>Friends of Figma, Portugal</i> for the design
-        </span>
+        </span> */}
       </div>
     </footer>
   )
